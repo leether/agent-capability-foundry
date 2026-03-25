@@ -3,6 +3,10 @@
 An agent-native, capability-oriented repository for curated reusable methods
 across `Codex`, `OpenClaw`, and other runtime surfaces.
 
+Language:
+- English
+- [简体中文](../zh/README.md)
+
 ## What This Repository Is
 
 `agent-capability-foundry` is a curated public repository for reusable agent

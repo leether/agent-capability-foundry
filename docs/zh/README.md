@@ -3,6 +3,10 @@
 一个 `agent-native`、`capability-oriented` 的 curated repository，用来承载
 跨 `Codex`、`OpenClaw` 和其他 runtime surface 的可复用方法。
 
+语言入口：
+- [English](../en/README.md)
+- 简体中文
+
 ## 这个仓库是什么
 
 `agent-capability-foundry` 是一个 curated 的公开仓库，用来承载可复用的
