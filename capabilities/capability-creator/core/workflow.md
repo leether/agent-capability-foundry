@@ -8,9 +8,10 @@
 4. Attach constraints to each phase.
 5. Attach gates between phases.
 6. Evaluate whether the current gate is passed.
-7. Write English source documents.
-8. Derive Chinese companion documents.
-9. Freeze the current phase before moving forward.
+7. If public export is in scope, inspect release topology.
+8. Write English source documents.
+9. Derive Chinese companion documents.
+10. Freeze the current phase before moving forward.
 
 ## Output Expectation
 
@@ -20,5 +21,6 @@ The output should contain:
 - phase list
 - phase constraints
 - gate criteria
+- release topology judgment
 - current phase judgment
 - next-step judgment

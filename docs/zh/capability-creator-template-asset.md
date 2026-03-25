@@ -29,6 +29,17 @@
 - Gate 1:
 - Gate 2:
 
+## Release Topology
+- Source repo:
+- Public export repo:
+- Shared git metadata: yes/no
+- Public remote safe to bind: yes/no
+
+## Export Gate
+- Repository identity isolated:
+- Public remote binding safe:
+- Private source remote preserved:
+
 ## Current Phase Judgment
 - ...
 

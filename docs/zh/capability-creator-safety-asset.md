@@ -12,3 +12,5 @@
 - 不要发布只有中文的规范性内容。
 - 不要让 runtime-specific convenience 覆盖 capability contract。
 - 不要把私有建仓历史直接当成公开 capability，除非它已被改写为可复用方法。
+- 不要把共享 git 元数据的 worktree 当成独立公开仓。
+- 在仓库身份隔离未验证前，不要绑定公开 remote。

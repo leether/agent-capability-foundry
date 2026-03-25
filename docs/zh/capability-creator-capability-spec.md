@@ -27,6 +27,7 @@
 - 跨阶段门控
 - 英文真源 / 中文派生文档
 - runtime-aware adapter 规划
+- release-topology isolation checks
 - validation expectations
 
 ## 预期用途
@@ -69,7 +70,8 @@
 6. 未过门时禁止跳阶段
 7. 先英文真源，再中文派生
 8. 要求 runtime-aware capability 建模
-9. 在提升前要求 validation
+9. 在公开 push 前要求 release-topology 检查
+10. 在提升前要求 validation
 
 ## Runtime Targets
 
@@ -109,6 +111,25 @@
 - 私有主机或操作员命名
 - 私有内部操作证据
 
+它还必须区分：
+
+- 内容层的隔离工作面
+- 仓库身份层的隔离
+
+如果公开导出需要绑定一个不同于私有源仓的 remote，那么 shared-git-metadata
+worktree 不能被当作足够的隔离。
+
+## 发布拓扑约束
+
+在 capability 生成的仓库被公开推送之前，必须验证：
+
+- 导出目标是否是独立 git 仓库
+- `.git` 指向的是共享元数据还是独立仓
+- `git rev-parse --git-common-dir` 是否与私有源仓共享
+- 绑定公开 remote 是否会连带修改私有源仓的 remote 配置
+
+这个 workflow 必须把“内容隔离”和“仓库身份隔离”视为两道不同的门。
+
 ## 验证预期
 
 这项 capability 应验证结果设计中是否包含：
@@ -119,7 +140,15 @@
 - 跨阶段门控
 - 英文真源 / 中文派生规则
 - runtime-aware capability 规划
+- release-topology isolation checks
 - 显式下一道门的判断
+
+对于可能公开导出的仓库，还应检查：
+
+- `.git`
+- `git rev-parse --git-common-dir`
+- `git remote -v`
+- 导出目标是否可以安全绑定公开 remote
 
 ## 当前门控评估
 

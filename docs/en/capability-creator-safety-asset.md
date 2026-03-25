@@ -11,3 +11,5 @@ Last updated: 2026-03-26
 - Do not publish Chinese-only normative content.
 - Do not let runtime-specific convenience override the capability contract.
 - Do not turn private build history into a public capability unless it is rewritten as a reusable method.
+- Do not treat a shared-git-metadata worktree as an independent public repository.
+- Do not bind a public remote before repository identity isolation is verified.
