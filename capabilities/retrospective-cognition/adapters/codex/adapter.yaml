@@ -1,0 +1,17 @@
+runtime: codex
+capability: retrospective-cognition
+materialize:
+  copies:
+    - from: core/skill.md
+      to: skills/retrospective-cognition/SKILL.md
+    - from: core/workflow.md
+      to: skills/retrospective-cognition/workflow.md
+    - from: core/template.md
+      to: skills/retrospective-cognition/template.md
+    - from: core/safety.md
+      to: skills/retrospective-cognition/safety.md
+post_install:
+  - type: exists
+    path: skills/retrospective-cognition/SKILL.md
+  - type: exists
+    path: skills/retrospective-cognition/workflow.md

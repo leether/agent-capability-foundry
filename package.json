@@ -1,0 +1,14 @@
+{
+  "name": "agent-capability-foundry",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "agent-capability-foundry": "./cli/agent-capability-foundry.mjs"
+  },
+  "scripts": {
+    "install:dry-run:codex": "node ./cli/agent-capability-foundry.mjs install retrospective-cognition --runtime codex --dry-run",
+    "install:dry-run:openclaw": "node ./cli/agent-capability-foundry.mjs install retrospective-cognition --runtime openclaw --dry-run"
+  }
+}
